@@ -10,6 +10,7 @@ const client=net.connect(PORT,HOST,(err)=>{
 	console.log("创建客户端连接");
 	//发送消息给客户端
 	client.write("我客户端给发消息了"); 
+	client.end();
 });
 
 //给client添加传输数据时间
