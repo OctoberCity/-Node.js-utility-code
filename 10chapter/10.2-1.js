@@ -9,13 +9,13 @@ const client=net.connect(PORT,HOST,(err)=>{
 	}
 	console.log("创建客户端连接");
 	//发送消息给客户端
-	client.write("这是我的消息"); 
+	client.write("我客户端给发消息了"); 
 	//client.end();
 });
 
 //给client添加传输数据时间
 client.on("data",(data)=>{
-  // console.log("服务端给我发送的回应数据：");
+   console.log("服务端给我发送的回应数据：");
    console.log(data.toString());
 });
 
